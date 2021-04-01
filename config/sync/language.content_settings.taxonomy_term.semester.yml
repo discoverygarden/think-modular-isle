@@ -1,0 +1,16 @@
+uuid: 756c7460-5599-4c45-b063-eecfe9dc2ecc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.semester
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.semester
+target_entity_type_id: taxonomy_term
+target_bundle: semester
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,16 @@
+uuid: 0c563ba4-4e42-4ebf-8d43-eb34d3596d54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.teacher_training
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.teacher_training
+target_entity_type_id: node
+target_bundle: teacher_training
+default_langcode: site_default
+language_alterable: false

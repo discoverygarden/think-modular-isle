@@ -173,17 +173,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_rights
-  field_semester_name:
-    label: 'Semester » Taxonomy term » Name'
+  field_semester:
+    label: Semester
     datasource_id: 'entity:node'
-    property_path: 'field_semester:entity:name'
+    property_path: field_semester
     type: string
     dependencies:
       config:
         - field.storage.node.field_semester
-      module:
-        - taxonomy
-        - taxonomy
   field_tags:
     label: Tags
     datasource_id: 'entity:node'

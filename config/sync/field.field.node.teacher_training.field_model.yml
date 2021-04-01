@@ -1,0 +1,29 @@
+uuid: 31c6fd7e-4b00-4c65-99c9-5e4604a73db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_model
+    - node.type.teacher_training
+    - taxonomy.vocabulary.islandora_models
+id: node.teacher_training.field_model
+field_name: field_model
+entity_type: node
+bundle: teacher_training
+label: Model
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      islandora_models: islandora_models
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
