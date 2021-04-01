@@ -1,6 +1,6 @@
 site_id: '1'
-url_http: 'http://islandora.traefik.me/matomo/'
-url_https: 'https://islandora.traefik.me/matomo/'
+url_http: 'http://192-168-0-22.traefik.me/matomo/'
+url_https: 'https://192-168-0-22.traefik.me/matomo/'
 domain_mode: 0
 visibility:
   request_path_mode: 0

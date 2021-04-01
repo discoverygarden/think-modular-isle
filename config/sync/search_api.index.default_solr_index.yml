@@ -20,6 +20,7 @@ dependencies:
     - field.storage.node.field_oclc_number
     - field.storage.node.field_resource_type
     - field.storage.node.field_rights
+    - field.storage.node.field_semester
     - field.storage.node.field_subject
     - field.storage.node.field_tags
     - search_api.server.default_solr_server
@@ -172,6 +173,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_rights
+  field_semester_name:
+    label: 'Semester » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_semester:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_semester
+      module:
+        - taxonomy
+        - taxonomy
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
