@@ -7,7 +7,7 @@ dependencies:
     - system.menu.main
     - taxonomy.vocabulary.islandora_models
   content:
-    - 'taxonomy_term:islandora_models:e68a0972-fb25-4a84-b15b-0ca45413f362'
+    - 'taxonomy_term:islandora_models:ac5a8eac-b630-4b85-9ab8-604b8b3fe13d'
   module:
     - node
     - taxonomy
@@ -149,7 +149,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            23: 23
+            24: 24
           group: 1
           exposed: false
           expose:
@@ -158,6 +158,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -165,8 +167,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

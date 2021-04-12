@@ -122,5 +122,5 @@ default_options:
   tileSize: 256
 _core:
   default_config_hash: SodgIAY6XQHkm493PQ-sLrnBtM2PoP9g8agJU-HM-U8
-iiif_server: 'https://192-168-0-22.traefik.me/cantaloupe/iiif/2'
+iiif_server: 'https://157-90-227-237.traefik.me/cantaloupe/iiif/2'
 manifest_view: iiif_manifest
