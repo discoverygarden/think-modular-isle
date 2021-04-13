@@ -8,7 +8,8 @@ dependencies:
     - media.type.image
     - taxonomy.vocabulary.islandora_media_use
   content:
-    - 'taxonomy_term:islandora_media_use:f28c1605-27d8-48bf-947c-21f7af3e1ce1'
+    - 'taxonomy_term:islandora_media_use:13180f19-e277-44ed-b516-9da794f623d9'
+    - 'taxonomy_term:islandora_media_use:233c331e-4044-4ead-a525-87d74a66d0f5'
   module:
     - islandora
     - media
@@ -163,6 +164,7 @@ display:
           operator: or
           value:
             18: 18
+            20: 20
           group: 1
           exposed: false
           expose:
@@ -171,6 +173,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -178,8 +182,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

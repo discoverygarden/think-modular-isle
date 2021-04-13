@@ -11,18 +11,29 @@ dependencies:
   config:
     - field.storage.node.field_alternative_title
     - field.storage.node.field_edtf_date_created
+    - field.storage.node.field_edtf_date_published
     - field.storage.node.field_description
     - field.storage.node.field_dewey_classification
     - field.storage.node.field_edition
     - field.storage.node.field_extent
+    - field.storage.node.field_grade
     - field.storage.node.field_isbn
+    - field.storage.node.field_language
     - field.storage.node.field_lcc_classification
+    - field.storage.node.field_linked_agent
+    - field.storage.node.field_geographic_subject
+    - field.storage.node.field_material_type
+    - field.storage.node.field_member_of
+    - field.storage.node.field_model
     - field.storage.node.field_oclc_number
+    - field.storage.node.field_place_published
+    - field.storage.node.field_edtf_date
     - field.storage.node.field_resource_type
     - field.storage.node.field_rights
     - field.storage.node.field_semester
     - field.storage.node.field_subject
     - field.storage.node.field_tags
+    - field.storage.node.field_topic
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
 third_party_settings:
@@ -133,6 +144,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_edtf_date_created
+  field_edtf_date_published:
+    label: 'Date Published'
+    datasource_id: 'entity:node'
+    property_path: field_edtf_date_published
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_edtf_date_published
   field_extent:
     label: Extent
     datasource_id: 'entity:node'
@@ -141,6 +160,28 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_extent
+  field_geo_subject:
+    label: 'Location of Publishing'
+    datasource_id: 'entity:node'
+    property_path: 'field_geographic_subject:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_geographic_subject
+      module:
+        - taxonomy
+        - taxonomy
+  field_grade:
+    label: Grade
+    datasource_id: 'entity:node'
+    property_path: 'field_grade:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_grade
+      module:
+        - taxonomy
+        - taxonomy
   field_isbn:
     label: ISBN
     datasource_id: 'entity:node'
@@ -149,6 +190,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_isbn
+  field_language:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: 'field_language:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_language
+      module:
+        - taxonomy
+        - taxonomy
   field_lcc_classification:
     label: 'Library of Congress Classification'
     datasource_id: 'entity:node'
@@ -157,6 +209,39 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_lcc_classification
+  field_material_type:
+    label: 'Material Type'
+    datasource_id: 'entity:node'
+    property_path: 'field_material_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_material_type
+      module:
+        - taxonomy
+        - taxonomy
+  field_member_of_id:
+    label: 'Member of (ID)'
+    datasource_id: 'entity:node'
+    property_path: 'field_member_of:entity:nid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
+      module:
+        - node
+        - node
+  field_member_of_title:
+    label: 'Member of (Title)'
+    datasource_id: 'entity:node'
+    property_path: 'field_member_of:entity:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_member_of
+      module:
+        - node
+        - node
   field_oclc_number:
     label: 'OCLC Number'
     datasource_id: 'entity:node'
@@ -165,6 +250,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_oclc_number
+  field_place_published:
+    label: 'Place Published'
+    datasource_id: 'entity:node'
+    property_path: field_place_published
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_place_published
+  field_publishing_date:
+    label: 'Publishing Date'
+    datasource_id: 'entity:node'
+    property_path: field_edtf_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_edtf_date
   field_rights:
     label: Rights
     datasource_id: 'entity:node'
@@ -181,6 +282,28 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_semester
+  field_semester_name:
+    label: 'Semester (Name)'
+    datasource_id: 'entity:node'
+    property_path: 'field_semester:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_semester
+      module:
+        - taxonomy
+        - taxonomy
+  field_subject:
+    label: Subject
+    datasource_id: 'entity:node'
+    property_path: 'field_subject:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_subject
+      module:
+        - taxonomy
+        - taxonomy
   field_tags:
     label: Tags
     datasource_id: 'entity:node'
@@ -189,14 +312,25 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_tags
-  name:
-    label: Subject
+  field_topic:
+    label: Topic
     datasource_id: 'entity:node'
-    property_path: 'field_subject:entity:name'
+    property_path: 'field_topic:entity:name'
     type: string
     dependencies:
       config:
-        - field.storage.node.field_subject
+        - field.storage.node.field_topic
+      module:
+        - taxonomy
+        - taxonomy
+  linked_agent:
+    label: 'Linked Agent'
+    datasource_id: 'entity:node'
+    property_path: 'field_linked_agent:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_linked_agent
       module:
         - taxonomy
         - taxonomy
@@ -208,6 +342,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_resource_type
+      module:
+        - taxonomy
+        - taxonomy
+  name_2:
+    label: 'Model » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_model:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_model
       module:
         - taxonomy
         - taxonomy
