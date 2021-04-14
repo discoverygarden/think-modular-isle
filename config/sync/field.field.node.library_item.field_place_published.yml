@@ -1,0 +1,19 @@
+uuid: 055a4b07-6574-432c-8166-e16f4153f8b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_place_published
+    - node.type.library_item
+id: node.library_item.field_place_published
+field_name: field_place_published
+entity_type: node
+bundle: library_item
+label: 'Place Published'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
