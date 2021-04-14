@@ -1,0 +1,21 @@
+uuid: 19e5125b-e54e-49c6-a46c-720da979fb77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edtf_date
+    - node.type.library_item
+  module:
+    - controlled_access_terms
+id: node.library_item.field_edtf_date
+field_name: field_edtf_date
+entity_type: node
+bundle: library_item
+label: 'Publishing Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: edtf

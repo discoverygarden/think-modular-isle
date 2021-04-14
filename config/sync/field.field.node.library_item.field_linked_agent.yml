@@ -1,0 +1,38 @@
+uuid: 39c17638-daec-4ee3-8ed4-35b36ac1d7e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linked_agent
+    - node.type.library_item
+    - taxonomy.vocabulary.corporate_body
+    - taxonomy.vocabulary.family
+    - taxonomy.vocabulary.person
+  module:
+    - controlled_access_terms
+id: node.library_item.field_linked_agent
+field_name: field_linked_agent
+entity_type: node
+bundle: library_item
+label: 'Linked Agent'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      corporate_body: corporate_body
+      family: family
+      person: person
+    sort:
+      field: name
+      direction: asc
+    auto_create: 0
+    auto_create_bundle: corporate_body
+  rel_types:
+    'relators:aut': 'Author (aut)'
+    'relators:pbl': 'Publisher (pbl)'
+field_type: typed_relation

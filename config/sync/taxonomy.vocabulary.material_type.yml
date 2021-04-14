@@ -1,0 +1,8 @@
+uuid: 7da99be4-da72-460e-8f59-70ca58b99711
+langcode: en
+status: true
+dependencies: {  }
+name: 'Material Type'
+vid: material_type
+description: ''
+weight: 0
