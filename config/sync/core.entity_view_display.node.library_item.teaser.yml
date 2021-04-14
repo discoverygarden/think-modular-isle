@@ -1,0 +1,104 @@
+uuid: 9be0a3cd-bbb9-4573-990b-385535213d33
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.library_item.field_display_hints
+    - field.field.node.library_item.field_edtf_date
+    - field.field.node.library_item.field_edtf_date_published
+    - field.field.node.library_item.field_geographic_subject
+    - field.field.node.library_item.field_grade
+    - field.field.node.library_item.field_language
+    - field.field.node.library_item.field_linked_agent
+    - field.field.node.library_item.field_material_type
+    - field.field.node.library_item.field_member_of
+    - field.field.node.library_item.field_model
+    - field.field.node.library_item.field_place_published
+    - field.field.node.library_item.field_semester
+    - field.field.node.library_item.field_subject
+    - field.field.node.library_item.field_topic
+    - node.type.library_item
+  module:
+    - user
+id: node.library_item.teaser
+targetEntityType: node
+bundle: library_item
+mode: teaser
+content:
+  display_media_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  display_media_thumbnail:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  islandora_fits_checksum:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  openseadragon_media_evas_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  openseadragon_media_evas_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  openseadragon_media_evas_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  pdfjs_media_evas_service_file:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_display_hints: true
+  field_edtf_date: true
+  field_edtf_date_published: true
+  field_geographic_subject: true
+  field_grade: true
+  field_language: true
+  field_linked_agent: true
+  field_material_type: true
+  field_member_of: true
+  field_model: true
+  field_place_published: true
+  field_semester: true
+  field_subject: true
+  field_topic: true
+  langcode: true

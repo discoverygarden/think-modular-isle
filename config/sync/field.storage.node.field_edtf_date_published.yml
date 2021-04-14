@@ -1,0 +1,22 @@
+uuid: 6479c754-75ba-4242-b809-e02f04279b87
+langcode: en
+status: true
+dependencies:
+  module:
+    - controlled_access_terms
+    - node
+id: node.field_edtf_date_published
+field_name: field_edtf_date_published
+entity_type: node
+type: edtf
+settings:
+  max_length: '128'
+  is_ascii: false
+  case_sensitive: false
+module: controlled_access_terms
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
